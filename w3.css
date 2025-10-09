@@ -1728,3 +1728,15 @@ w3-hover-cobalt:hover {
   width: 300px;
   height: 200px;
 }
+
+.w3-expertise-testimonials {
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 50px;
+}
+
+.w3-expertise-testimonials hr {
+  border: 1px solid black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
