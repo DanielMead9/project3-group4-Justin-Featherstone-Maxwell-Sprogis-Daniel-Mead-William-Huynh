@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Who We Are - AV Repair</title>
+    <link rel="stylesheet" href="w3.css" />
+    <style>
+      /* Prevent the fixed top navbar from overlapping page content.
+         Define a CSS variable for the navbar height so it's easy to adjust. */
+      :root {
+        --navbar-height: 152px;
+      }
+      .w3-top {
+        z-index: 9999; /* ensure it sits above header images */
+      }
+      /* Add top padding equal to the navbar height so content starts below it */
+      body {
+        padding-top: var(--navbar-height);
+      }
+      /* On small screens the navbar may wrap and become taller; make padding adaptive */
+      @media (max-width: 600px) {
+        :root {
+          --navbar-height: 88px;
+        }
+      }
+
+      /* Make the grid behave like equal-height rows */
+      #service-grid .w3-row-padding {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      /* Make all columns flexible and consistent */
+      #service-grid .w3-col {
+        display: flex;
+      }
+
+      /* Ensure each card takes full height of its column */
+      #service-grid .w3-card-4 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+      }
+
+      /* Image consistency */
+      #service-grid img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      /* Keep text area balanced */
+      #service-grid .w3-container {
+        flex-grow: 1; /* stretches content to fill space */
+      }
+
+      /* Optional: Make all buttons aligned at the bottom */
+      #service-grid .w3-button {
+        margin-top: auto;
+      }
+    </style>
+  </head>
+  <body class="w3-light-grey">
+    <!-- Top navigation -->
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-card">
+        <a href="/index.html" class="w3-bar-item w3-button w3-wide"
+          ><img
+            src="images/AVRepairLogo.webp"
+            alt="AV Repair Inc Logo"
+            style="width: 100%; max-width: 150px"
+        /></a>
+        <!-- Right-sided menu links -->
+        <div class="w3-right w3-hide-small">
+          <a href="/index.html" class="w3-bar-item w3-button">Home</a>
+
+          <!-- Dropdown for About -->
+          <div class="w3-dropdown-hover w3-bar-item">
+            <!-- TODO Fix the positioning of the button -->
+            <a class="w3-button"> About <i class="fa fa-caret-down"></i> </a>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+              <a href="/who-we-are.html" class="w3-bar-item w3-button"
+                >Who We Are</a
+              >
+              <a href="/meet-the-team.html" class="w3-bar-item w3-button"
+                >Meet the Team</a
+              >
+            </div>
+          </div>
+
+          <a href="/services.html" class="w3-bar-item w3-button">Services</a>
+          <div class="w3-dropdown-hover w3-bar-item">
+            <a class="w3-button"> Our Work <i class="fa fa-caret-down"></i> </a>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+              <a href="expertise.html" class="w3-bar-item w3-button"
+                >Expertise</a
+              >
+              <a href="photogallery.html" class="w3-bar-item w3-button"
+                >Photo Gallery</a
+              >
+              <a href="testimonials.html" class="w3-bar-item w3-button"
+                >Testimonials</a
+              >
+            </div>
+          </div>
+          <a href="/car-talk.html" class="w3-bar-item w3-button">Car Talk</a>
+          <a href="/contact.html" class="w3-bar-item w3-button">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header
+      class="w3-display-container w3-content w3-center"
+      style="max-width: 1400px"
+      id="home"
+    >
+      <img
+        class="w3-image"
+        src="/images/AVRepairLogo.webp"
+        alt="AV Repair Inc Logo"
+        style="width: 40%; height: 40%"
+      />
+    </header>
+
+    <main>
+      <!-- Main content -->
+      <div class="w3-content w3-padding" style="max-width: 1100px">
+        <h1 class="w3-border-bottom w3-border-light-grey w3-center">
+          Who We Are
+        </h1>
+        <div class="w3-container w3-padding-32" id="who-we-are">
+          <p>
+            Since 1988, whether you need auto body repair, mechanical services,
+            body painting or restoration services, our team of skilled
+            technicians will do it.
+          </p>
+          <h2 class="w3-border-bottom w3-border-light-grey">Our Mission</h2>
+          <p>
+            To ensure your satisfaction, whether you come for routine
+            maintenance or major repairs. Word of mouth is our best salesman.
+          </p>
+          <blockquote class="w3-large">
+            <p>
+              “Jim and his team are my go-to auto service shop. I've been taking
+              my cars to him for over 25 years. They've done everything from
+              body work to engine repair. I wouldn't think of taking a vehicle
+              of mine anywhere else.”
+            </p>
+          </blockquote>
+          <p class="w3-right w3-opacity">- Paul M. Andover MA</p>
+          <br />
+          <h3 class="w3-border-bottom w3-border-light-grey">
+            We pride ourselves on building relationships with each of our
+            clients. We value every customer who walks through the door, no
+            matter how big or small the repair is.
+          </h3>
+          <p>
+            At AV Repair our only goal is to provide you with exceptional and
+            honest repair work, without the inflated prices. We provide bumper
+            to bumper service and use quality parts and fluids. We want you to
+            feel confident that you will get professional service that never
+            leaves you feeling cheated.
+          </p>
+          <h2>What We Do</h2>
+          <div class="w3-row">
+            <div class="w3-half">
+              <ul class="w3-ul">
+                <li>Auto body and paint repairs</li>
+                <li>Frame and suspension repairs</li>
+                <li>Engine tune-up</li>
+                <li>Insured collision repair</li>
+                <li>Tires</li>
+                <li>Brake service</li>
+              </ul>
+            </div>
+            <div class="w3-half">
+              <ul class="w3-ul">
+                <li>Exhaust systems</li>
+                <li>Cooling systems</li>
+                <li>Air conditioning</li>
+                <li>Front end alignment</li>
+                <li>Oil and fluid maintenance</li>
+                <li>Tire rotation and balancing</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="w3-container w3-padding-32" id="meet-the-team">
+          <h2 class="w3-border-bottom w3-border-light-grey w3-center">Meet the Team</h2>
+          <!-- Insert group photo here -->
+           <ul>
+            <li>Jim McAllister, Owner</li>
+           </ul>
+          <p></p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-16">
+      <p class="w3-small">
+        2350 Turnpike St, North Andover, MA 01845 |
+        <a href="tel:(978) 975-0957">(978) 975-0957</a> |
+        <a href="mailto:avrepairinc@gmail.com">avrepairinc@gmail.com</a>
+      </p>
+    </footer>
+  </body>
+</html>
