@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <title>W3.CSS Template</title>
+    <link
+      rel="stylesheet"
+      href="w3.css"
+    />
+    <style>
+      /* Prevent the fixed top navbar from overlapping page content.
+         Define a CSS variable for the navbar height so it's easy to adjust. */
+      :root {
+        --navbar-height: 152px;
+      }
+      .w3-top {
+        z-index: 9999; /* ensure it sits above header images */
+      }
+      /* Add top padding equal to the navbar height so content starts below it */
+      body {
+        padding-top: var(--navbar-height);
+      }
+      /* On small screens the navbar may wrap and become taller; make padding adaptive */
+      @media (max-width: 600px) {
+        :root {
+          --navbar-height: 88px;
+        }
+      }
+    </style>
+  </head>
+  <body class="w3-light-grey">
+    <!-- Top navigation -->
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-card">
+        <a
+          href="/index.html"
+          class="w3-bar-item w3-button w3-wide"
+          ><img
+            src="images/AVRepairLogo.webp"
+            alt="AV Repair Inc Logo"
+            style="width: 100%; max-width: 150px"
+        /></a>
+        <!-- Right-sided menu links -->
+        <div class="w3-right w3-hide-small">
+          <a
+            href="/index.html"
+            class="w3-bar-item w3-button"
+            >Home</a
+          >
+
+          <!-- Dropdown for About -->
+          <div class="w3-dropdown-hover w3-bar-item">
+            <!-- TODO Fix the positioning of the button -->
+            <a class="w3-button"> About <i class="fa fa-caret-down"></i> </a>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+              <a
+                href="/who-we-are.html"
+                class="w3-bar-item w3-button"
+                >Who We Are</a
+              >
+              <a
+                href="/meet-the-team.html"
+                class="w3-bar-item w3-button"
+                >Meet the Team</a
+              >
+            </div>
+          </div>
+
+          <a
+            href="/services.html"
+            class="w3-bar-item w3-button"
+            >Services</a
+          >
+          <div class="w3-dropdown-hover w3-bar-item">
+            <a class="w3-button"> Our Work <i class="fa fa-caret-down"></i> </a>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+              <a
+                href="expertise.html"
+                class="w3-bar-item w3-button"
+                >Expertise</a
+              >
+              <a
+                href="photogallery.html"
+                class="w3-bar-item w3-button"
+                >Photo Gallery</a
+              >
+              <a
+                href="testimonials.html"
+                class="w3-bar-item w3-button"
+                >Testimonials</a
+              >
+            </div>
+          </div>
+          <a
+            href="/car-talk.html"
+            class="w3-bar-item w3-button"
+            >Car Talk</a
+          >
+          <a
+            href="/contact.html"
+            class="w3-bar-item w3-button"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header
+      class="w3-display-container w3-content w3-center"
+      style="max-width: 1400px"
+      id="home"
+    >
+      <img
+        class="w3-image"
+        src="/images/AVRepairLogo.webp"
+        alt="AV Repair Inc Logo"
+        style="width: 40%; height: 40%"
+      />
+    </header>
+
+    <main>
+      <div class="w3-expertise-testimonials">
+        <p>
+          “I had pulled into a parking spot that had a chunk of ice which pulled
+          off the plastic undercover of the front of my car. When I hit 40 mph,
+          my car sounded like a bicycle with a trading card in the spokes. After
+          being told it would be a wait of at least two weeks to get it repaired
+          at a Toyota collison center, I stopped at AV Repair on my way to work.
+          Not only was my car put on the lift within 10 minutes, Mr. Smetanka
+          had the mechanic put in some screws to hold it in place. He explained
+          that except for the fact the plastic was a bit ragged from scraping
+          the road, it did not need any further repair. When I asked for the
+          bill, he said , "No charge. Glad to help." I haven't had anyone be
+          this honest and generous in a long time. I will definitely take my car
+          here if it needs any repairs. I have also recommended AV repair to all
+          my friends in the area.”
+          <br />
+          <br />
+          - Kathy P, Malden MA
+        </p>
+        <hr />
+
+        <p>
+          “On a Thursday evening, I called AV Repair to have them look at some
+          rear bumper damage to my car. Jim was able to look at it first thing
+          Friday morning. When I dropped it off, he took a look at it, explained
+          what he could see, then explained to me what the potential issues
+          could be once they looked underneath. About an hour later he called
+          back and explained the situation: cosmetic damage only. I pushed a
+          little to make sure there wasn't anything that I really needed to take
+          care of. He explained which layers of the bumper had absorbed the
+          impact and which hadn't even been touched, setting my mind at ease.
+          <br /><br />
+          I would go back to AV Repair in a heartbeat. They have a strong
+          customer service focus, are patient, and they're willing to educate
+          people like me.”
+          <br /><br />
+          - Matt W, Middleton MA
+        </p>
+
+        <hr />
+        <p>
+          “I've been in the area almost 13yrs and have never found a garage that
+          I felt I could really trust.
+          <br /><br />
+          We found this place as we were looking for a repair shop after our car
+          was involved in fender bender and needed body work back in
+          Dec'12/Jan'13. Jim was very helpful and informative and he also took
+          time to explain a lot of the work that was needed. He also mentioned
+          they do more than ust autobody work and based on the that, we decided
+          to send our cars over for maintenance and other repairs.
+          <br /><br />
+          Since we started going there, we have been VERY pleased with the
+          service, the quick turnaround time, the reasonable prices, and also
+          with Jim's candor. If we we’re looking at a big job for a car, he
+          asked what our intentions were to put into perspective whether the fix
+          was really needed or possibly a nice-to-have. We ended up not having
+          the job done, which would have been more than $2k, but he's earned our
+          trust and repeated business.”
+          <br /><br />
+          - FP. North Andover MA
+        </p>
+        <hr />
+
+        <p>
+          “Looking for a good place to keep your car running & looking good? AV
+          Repair in N. Andover is the place to go. This is one stop shopping for
+          your vehicle. They do auto repair & auto body & they do both very
+          well. Fair prices. They work well with & are recommended by many
+          insurance companies. Jim the owner is a real car guy & will make sure
+          you and your car are happy when you leave.”
+          <br /><br />
+          - Dave B. Maynard MA
+        </p>
+        <hr />
+
+        <p>
+          “I was visiting from out of town, got side-swiped, and needed to get a
+          fast repair. These guys were great: trustworthy, honest, reliable, and
+          friendly. They gave me a very fair price for the work, they did it
+          super fast, and they did exactly what they promised. I am so glad I
+          found these guys.”
+          <br /><br />
+          - JJ M. San Francisco CA
+        </p>
+        <hr />
+
+        <p>
+          “Jim and his team are my go-to auto service shop. I’ve been taking my
+          cars to him for over 25 years. They’ve done everything from body work
+          to engine repair. I wouldn’t think of taking a vehicle of mine
+          anywhere else.”
+          <br /><br />
+          — Paul M. Andover MA
+        </p>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-16">
+      <p class="w3-small">
+        2350 Turnpike St, North Andover, MA 01845 |
+        <a href="tel:(978) 975-0957">(978) 975-0957</a> |
+        <a href="mailto:avrepairinc@gmail.com">avrepairinc@gmail.com</a>
+      </p>
+    </footer>
+  </body>
+</html>
