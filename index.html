@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>W3.CSS Template</title>
+    <title>AV Repair</title>
     <link rel="stylesheet" href="w3.css" />
     <style>
       /* Prevent the fixed top navbar from overlapping page content.
@@ -23,6 +23,44 @@
         :root {
           --navbar-height: 88px;
         }
+      }
+
+      /* Make the grid behave like equal-height rows */
+      #service-grid .w3-row-padding {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      /* Make all columns flexible and consistent */
+      #service-grid .w3-col {
+        display: flex;
+      }
+
+      /* Ensure each card takes full height of its column */
+      #service-grid .w3-card-4 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+      }
+
+      /* Image consistency */
+      #service-grid img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      /* Keep text area balanced */
+      #service-grid .w3-container {
+        flex-grow: 1; /* stretches content to fill space */
+      }
+
+      /* Optional: Make all buttons aligned at the bottom */
+      #service-grid .w3-button {
+        margin-top: auto;
       }
     </style>
   </head>
@@ -162,6 +200,284 @@
             <li>Heating and Air Conditioning</li>
             <li>Engine Performance</li>
           </ul>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="w3-container w3-padding-32" id="service-grid">
+          <h2 class="w3-center w3-text-teal">We Offer These Services</h2>
+
+          <!-- Grid row -->
+          <div class="w3-row-padding w3-center">
+            <!-- Insured Collision Repair -->
+            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+              <div class="w3-card-4 w3-hover-shadow">
+                <img
+                  src="/images/services/collision.webp"
+                  alt="Insured Collision Repair"
+                  loading="lazy"
+                  class="w3-image"
+                  style="width: 100%; height: 200px; object-fit: cover"
+                />
+                <div class="w3-container w3-padding">
+                  <h3>Insured Collision Repair</h3>
+                  <p>
+                    Repair your vehicle after an accident with our expert team.
+                  </p>
+                  <a
+                    href="/services/insuredcollisionrepair.html"
+                    class="w3-button w3-teal w3-margin-top"
+                    >Learn More</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Body Repair -->
+            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+              <div class="w3-card-4 w3-hover-shadow">
+                <img
+                  src="/images/services/body_repair.webp"
+                  alt="Body Repair"
+                  loading="lazy"
+                  class="w3-image"
+                  style="width: 100%; height: 200px; object-fit: cover"
+                />
+                <div class="w3-container w3-padding">
+                  <h3>Body Repair</h3>
+                  <p>
+                    Comprehensive body repair services to restore your vehicle.
+                  </p>
+                  <a
+                    href="/services/bodyrepair.html"
+                    class="w3-button w3-teal w3-margin-top"
+                    >Find Out How</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Painting -->
+            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+              <div class="w3-card-4 w3-hover-shadow">
+                <img
+                  src="/images/services/paintwork.webp"
+                  alt="Car Painting"
+                  loading="lazy"
+                  class="w3-image"
+                  style="width: 100%; height: 200px; object-fit: cover"
+                />
+                <div class="w3-container w3-padding">
+                  <h3>Painting</h3>
+                  <p>
+                    Restore your vehicle's appearance with professional painting
+                    services.
+                  </p>
+                  <a
+                    href="/services/painting.html"
+                    class="w3-button w3-teal w3-margin-top"
+                    >Learn More</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Mechanical -->
+            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+              <div class="w3-card-4 w3-hover-shadow">
+                <img
+                  src="/images/services/mechanical.webp"
+                  alt="Mechanical Services"
+                  loading="lazy"
+                  class="w3-image"
+                  style="width: 100%; height: 200px; object-fit: cover"
+                />
+                <div class="w3-container w3-padding">
+                  <h3>Mechanical</h3>
+                  <p>
+                    Full-service mechanical repairs and maintenance for all
+                    vehicle types.
+                  </p>
+                  <a
+                    href="/services/mechanical.html"
+                    class="w3-button w3-teal w3-margin-top"
+                    >Find Out</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Rust Repair -->
+            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+              <div class="w3-card-4 w3-hover-shadow">
+                <img
+                  src="/images/services/rust.webp"
+                  alt="Rust Repair"
+                  loading="lazy"
+                  class="w3-image"
+                  style="width: 100%; height: 200px; object-fit: cover"
+                />
+                <div class="w3-container w3-padding">
+                  <h3>Rust Repair</h3>
+                  <p>Remove rust and corrosion from your vehicle's body.</p>
+                  <a
+                    href="/services/rustrepair.html"
+                    class="w3-button w3-teal w3-margin-top"
+                    >Learn How</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Restoration -->
+            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+              <div class="w3-card-4 w3-hover-shadow">
+                <img
+                  src="/images/services/restoration.webp"
+                  alt="Restoration"
+                  loading="lazy"
+                  class="w3-image"
+                  style="width: 100%; height: 200px; object-fit: cover"
+                />
+                <div class="w3-container w3-padding">
+                  <h3>Restoration</h3>
+                  <p>
+                    Expert restoration services to bring classic cars back to
+                    life.
+                  </p>
+                  <a
+                    href="/services/restoration.html"
+                    class="w3-button w3-teal w3-margin-top"
+                    >Explore</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Frame and Suspension Repair -->
+            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+              <div class="w3-card-4 w3-hover-shadow">
+                <img
+                  src="/images/services/frame_suspension.webp"
+                  alt="Frame and Suspension Repair"
+                  loading="lazy"
+                  class="w3-image"
+                  style="width: 100%; height: 200px; object-fit: cover"
+                />
+                <div class="w3-container w3-padding">
+                  <h3>Frame and Suspension Repair</h3>
+                  <p>
+                    Ensure your vehicle's safety and performance with expert
+                    frame and suspension repairs.
+                  </p>
+                  <a
+                    href="/services/frameandsuspensionrepair.html"
+                    class="w3-button w3-teal w3-margin-top"
+                    >Learn More</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Engine Tuning and Performance -->
+            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+              <div class="w3-card-4 w3-hover-shadow">
+                <img
+                  src="/images/services/engine.webp"
+                  alt="Engine Tuning and Performance"
+                  loading="lazy"
+                  class="w3-image"
+                  style="width: 100%; height: 200px; object-fit: cover"
+                />
+                <div class="w3-container w3-padding">
+                  <h3>Engine Tuning and Performance</h3>
+                  <p>
+                    Enhance your vehicle's performance with expert engine
+                    tuning.
+                  </p>
+                  <a
+                    href="/services/enginetuning.html"
+                    class="w3-button w3-teal w3-margin-top"
+                    >Details</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Exhaust Systems -->
+            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+              <div class="w3-card-4 w3-hover-shadow">
+                <img
+                  src="/images/services/exhaust.webp"
+                  alt="Exhaust Systems"
+                  loading="lazy"
+                  class="w3-image"
+                  style="width: 100%; height: 200px; object-fit: cover"
+                />
+                <div class="w3-container w3-padding">
+                  <h3>Exhaust Systems</h3>
+                  <p>
+                    Improve your vehicle's efficiency and sound with expert
+                    exhaust system repairs.
+                  </p>
+                  <a
+                    href="/services/exhaust.html"
+                    class="w3-button w3-teal w3-margin-top"
+                    >Explore</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Oil and Fluid Maintenance -->
+            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+              <div class="w3-card-4 w3-hover-shadow">
+                <img
+                  src="/images/services/oil_fluid.webp"
+                  alt="Oil and Fluid Maintenance"
+                  loading="lazy"
+                  class="w3-image"
+                  style="width: 100%; height: 200px; object-fit: cover"
+                />
+                <div class="w3-container w3-padding">
+                  <h3>Oil and Fluid Maintenance</h3>
+                  <p>
+                    Keep your vehicle running smoothly with regular oil and
+                    fluid maintenance.
+                  </p>
+                  <a
+                    href="/services/oilandfluidmaintenance.html"
+                    class="w3-button w3-teal w3-margin-top"
+                    >What We Do</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Tire Rotation and Balancing -->
+            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+              <div class="w3-card-4 w3-hover-shadow">
+                <img
+                  src="/images/services/wheel.webp"
+                  alt="Tire Rotation and Balancing"
+                  loading="lazy"
+                  class="w3-image"
+                  style="width: 100%; height: 200px; object-fit: cover"
+                />
+                <div class="w3-container w3-padding">
+                  <h3>Tire Rotation and Balancing</h3>
+                  <p>
+                    Extend the life of your tires with expert rotation and
+                    balancing.
+                  </p>
+                  <a
+                    href="/services/tirerotationandbalancing.html"
+                    class="w3-button w3-teal w3-margin-top"
+                    >Find Out</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Contact -->
