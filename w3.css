@@ -1706,3 +1706,25 @@ w3-hover-cobalt:hover {
 .w3-hover-border-pale-blue:hover {
   border-color: #e7ffff !important;
 }
+
+.w3-expertise p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+}
+.w3-expertise-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 80px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 50px;
+  justify-items: center;
+}
+
+.w3-expertise-cards img {
+  width: 300px;
+  height: 200px;
+}
