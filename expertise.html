@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <title>W3.CSS Template</title>
+    <link
+      rel="stylesheet"
+      href="w3.css"
+    />
+    <style>
+      /* Prevent the fixed top navbar from overlapping page content.
+         Define a CSS variable for the navbar height so it's easy to adjust. */
+      :root {
+        --navbar-height: 152px;
+      }
+      .w3-top {
+        z-index: 9999; /* ensure it sits above header images */
+      }
+      /* Add top padding equal to the navbar height so content starts below it */
+      body {
+        padding-top: var(--navbar-height);
+      }
+      /* On small screens the navbar may wrap and become taller; make padding adaptive */
+      @media (max-width: 600px) {
+        :root {
+          --navbar-height: 88px;
+        }
+      }
+    </style>
+  </head>
+  <body class="w3-light-grey">
+    <!-- Top navigation -->
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-card">
+        <a
+          href="/index.html"
+          class="w3-bar-item w3-button w3-wide"
+          ><img
+            src="images/AVRepairLogo.webp"
+            alt="AV Repair Inc Logo"
+            style="width: 100%; max-width: 150px"
+        /></a>
+        <!-- Right-sided menu links -->
+        <div class="w3-right w3-hide-small">
+          <a
+            href="/index.html"
+            class="w3-bar-item w3-button"
+            >Home</a
+          >
+
+          <!-- Dropdown for About -->
+          <div class="w3-dropdown-hover w3-bar-item">
+            <!-- TODO Fix the positioning of the button -->
+            <a class="w3-button"> About <i class="fa fa-caret-down"></i> </a>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+              <a
+                href="/who-we-are.html"
+                class="w3-bar-item w3-button"
+                >Who We Are</a
+              >
+              <a
+                href="/meet-the-team.html"
+                class="w3-bar-item w3-button"
+                >Meet the Team</a
+              >
+            </div>
+          </div>
+
+          <a
+            href="/services.html"
+            class="w3-bar-item w3-button"
+            >Services</a
+          >
+          <div class="w3-dropdown-hover w3-bar-item">
+            <a class="w3-button"> Our Work <i class="fa fa-caret-down"></i> </a>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+              <a
+                href="expertise.html"
+                class="w3-bar-item w3-button"
+                >Expertise</a
+              >
+              <a
+                href="photogallery.html"
+                class="w3-bar-item w3-button"
+                >Photo Gallery</a
+              >
+            </div>
+          </div>
+          <a
+            href="/car-talk.html"
+            class="w3-bar-item w3-button"
+            >Car Talk</a
+          >
+          <a
+            href="/contact.html"
+            class="w3-bar-item w3-button"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header
+      class="w3-display-container w3-content w3-center"
+      style="max-width: 1400px"
+      id="home"
+    >
+      <img
+        class="w3-image"
+        src="/images/AVRepairLogo.webp"
+        alt="AV Repair Inc Logo"
+        style="width: 40%; height: 40%"
+      />
+    </header>
+
+    <main>
+      <div class="w3-expertise">
+        <p>
+          We are a friendly, professional family owned and operated auto body
+          shop serving North Andover and the surrounding areas. We have been in
+          business for more than 25 years and have a great reputation for our
+          top-quality workmanship and our attention to detail. Our goal at AV
+          Repair is to provide you with an exceptional experience and make every
+          effort to give you our best throughout the entire repair process,
+          which is designed to be as smooth and simple as possible. We always
+          strive for excellence and 100% customer satisfaction and our high
+          level of repeat customers proves this. Come experience our expertise!
+        </p>
+      </div>
+
+      <div class="w3-expertise-cards">
+        <div style="display: inline-block; margin: 10px">
+          <h4>
+            <a
+              href="/paintservices.html"
+              class="w3-bar-item w3-button"
+              >Paint Services</a
+            >
+          </h4>
+          <img
+            src="images/Expertise/exp1.webp"
+            alt="Expertise"
+          />
+        </div>
+
+        <div style="display: inline-block; margin: 10px">
+          <h4>
+            <a
+              href="/tire-mounting.html"
+              class="w3-bar-item w3-button"
+              >Tire Mounting, Rotation and Balancing</a
+            >
+          </h4>
+          <img
+            src="images/Expertise/exp2.webp"
+            alt="Tire Mounting, Rotation and Balancing"
+            style="width: 300px"
+          />
+        </div>
+
+        <div style="display: inline-block; margin: 10px">
+          <h4>
+            <a
+              href="/engine-tuning.html"
+              class="w3-bar-item w3-button"
+              >Engine Tuning and Performance</a
+            >
+          </h4>
+          <img
+            src="images/Expertise/exp3.webp"
+            alt="Engine Tuning and Performance"
+            style="width: 300px"
+          />
+        </div>
+
+        <div style="display: inline-block; margin: 10px">
+          <h4>
+            <a
+              href="/rust-repair.html"
+              class="w3-bar-item w3-button"
+              >Rust Repair</a
+            >
+          </h4>
+          <img
+            src="images/Expertise/exp4.webp"
+            alt="Rust Repair"
+            style="width: 300px"
+          />
+        </div>
+
+        <div style="display: inline-block; margin: 10px">
+          <h4>
+            <a
+              href="/brake-repair.html"
+              class="w3-bar-item w3-button"
+              >Brake Repair</a
+            >
+          </h4>
+          <img
+            src="images/Expertise/exp5.webp"
+            alt="Brake Repair"
+            style="width: 300px"
+          />
+        </div>
+
+        <div style="display: inline-block; margin: 10px">
+          <h4>
+            <a
+              href="/frame-suspension.html"
+              class="w3-bar-item w3-button"
+              >Frame and Suspension Repair</a
+            >
+          </h4>
+          <img
+            src="images/Expertise/exp6.webp"
+            alt="Frame and Suspension Repair"
+            style="width: 300px"
+          />
+        </div>
+
+        <div style="display: inline-block; margin: 10px">
+          <h4>
+            <a
+              href="/tires.html"
+              class="w3-bar-item w3-button"
+              >Tires</a
+            >
+          </h4>
+          <img
+            src="images/Expertise/exp7.webp"
+            alt="Tires"
+            style="width: 300px"
+          />
+        </div>
+
+        <div style="display: inline-block; margin: 10px">
+          <h4>
+            <a
+              href="/restoration.html"
+              class="w3-bar-item w3-button"
+              >Restoration</a
+            >
+          </h4>
+          <img
+            src="images/Expertise/exp8.webp"
+            alt="Restoration"
+            style="width: 300px"
+          />
+        </div>
+
+        <div style="display: inline-block; margin: 10px">
+          <h4>
+            <a
+              href="/licensed-appraisal.html"
+              class="w3-bar-item w3-button"
+              >Licensed Appraisal</a
+            >
+          </h4>
+          <img
+            src="images/Expertise/exp9.webp"
+            alt="Licensed Appraisal"
+            style="width: 300px"
+          />
+        </div>
+
+        <div style="display: inline-block; margin: 10px">
+          <h4>
+            <a
+              href="/mechanical-services.html"
+              class="w3-bar-item w3-button"
+              >Automotive Technical & Mechanical Services</a
+            >
+          </h4>
+          <img
+            src="images/Expertise/exp10.webp"
+            alt="Automotive Technical & Mechanical Services"
+            style="width: 300px"
+          />
+        </div>
+
+        <div style="display: inline-block; margin: 10px">
+          <h4>
+            <a
+              href="/Autobodyrepair.html"
+              class="w3-bar-item w3-button"
+              >Auto Body Repair</a
+            >
+          </h4>
+          <img
+            src="images/Expertise/exp11.webp"
+            alt="Auto body repair"
+            style="width: 300px"
+          />
+        </div>
+
+        <div style="display: inline-block; margin: 10px">
+          <h4>
+            <a
+              href="/Exhaustsystems.html"
+              class="w3-bar-item w3-button"
+              >Exhaust Systems</a
+            >
+          </h4>
+          <img
+            src="images/Expertise/exp12.webp"
+            alt="Exhaust Systems"
+            style="width: 300px"
+          />
+        </div>
+
+        <div style="display: inline-block; margin: 10px">
+          <h4>
+            <a
+              href="/oil-fluids.html"
+              class="w3-bar-item w3-button"
+              >Oil & Fluid Maintenance</a
+            >
+          </h4>
+          <img
+            src="images/Expertise/exp13.webp"
+            alt="Oil & Fluid Maintenance"
+            style="width: 300px"
+          />
+        </div>
+
+        <div style="display: inline-block; margin: 10px">
+          <h4>
+            <a
+              href="/Computerizedmaintenancerecords.html"
+              class="w3-bar-item w3-button"
+              >Computerized Maintenance Records</a
+            >
+          </h4>
+          <img
+            src="images/Expertise/exp14.webp"
+            alt="Computerized Maintenance Records"
+            style="width: 300px"
+          />
+        </div>
+
+        <div style="display: inline-block; margin: 10px">
+          <h4>
+            <a
+              href="/Free written repair estimates.html"
+              class="w3-bar-item w3-button"
+              >Free Written Repair Estimates</a
+            >
+          </h4>
+          <img
+            src="images/Expertise/exp15.webp"
+            alt="Free written repair estimates"
+            style="width: 300px"
+          />
+        </div>
+
+        <div style="display: inline-block; margin: 10px">
+          <h4>
+            <a
+              href="/Insured collision repairs.html"
+              class="w3-bar-item w3-button"
+              >Insured Collision Repairs</a
+            >
+          </h4>
+          <img
+            src="images/Expertise/exp16.webp"
+            alt="Insured collision repairs"
+            style="width: 300px"
+          />
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-16">
+      <p class="w3-small">
+        2350 Turnpike St, North Andover, MA 01845 |
+        <a href="tel:(978) 975-0957">(978) 975-0957</a> |
+        <a href="mailto:avrepairinc@gmail.com">avrepairinc@gmail.com</a>
+      </p>
+    </footer>
+  </body>
+</html>
