@@ -24,63 +24,31 @@
           --navbar-height: 88px;
         }
       }
-
-      /* Make the grid behave like equal-height rows */
-      #service-grid .w3-row-padding {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      /* Make all columns flexible and consistent */
-      #service-grid .w3-col {
-        display: flex;
-      }
-
-      /* Ensure each card takes full height of its column */
-      #service-grid .w3-card-4 {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 100%;
-        height: 100%;
-      }
-
-      /* Image consistency */
-      #service-grid img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-      }
-
-      /* Keep text area balanced */
-      #service-grid .w3-container {
-        flex-grow: 1; /* stretches content to fill space */
-      }
-
-      /* Optional: Make all buttons aligned at the bottom */
-      #service-grid .w3-button {
-        margin-top: auto;
-      }
     </style>
   </head>
   <body class="w3-light-grey">
     <!-- Top navigation -->
     <div class="w3-top">
-      <div class="w3-bar w3-white w3-card">
-        <a href="/index.html" class="w3-bar-item w3-button w3-wide"
+      <div
+        class="w3-bar w3-white w3-card"
+        style="align-items: center; justify-content: space-between"
+      >
+        <a
+          href="/index.html"
+          class="w3-bar-item w3-button w3-wide"
+          style="padding-top: 10px; padding-bottom: 10px"
           ><img
             src="images/AVRepairLogo.webp"
             alt="AV Repair Inc Logo"
             style="width: 100%; max-width: 150px"
         /></a>
-        <!-- Right-sided menu links -->
-        <div class="w3-right w3-hide-small">
+        <div
+          class="w3-right w3-hide-small"
+          style="display: flex; align-items: center"
+        >
           <a href="/index.html" class="w3-bar-item w3-button">Home</a>
 
-          <!-- Dropdown for About -->
           <div class="w3-dropdown-hover w3-bar-item">
-            <!-- TODO Fix the positioning of the button -->
             <a class="w3-button"> About <i class="fa fa-caret-down"></i> </a>
             <div class="w3-dropdown-content w3-bar-block w3-card-4">
               <a href="/who-we-are.html" class="w3-bar-item w3-button"
@@ -93,6 +61,7 @@
           </div>
 
           <a href="/services.html" class="w3-bar-item w3-button">Services</a>
+
           <div class="w3-dropdown-hover w3-bar-item">
             <a class="w3-button"> Our Work <i class="fa fa-caret-down"></i> </a>
             <div class="w3-dropdown-content w3-bar-block w3-card-4">
@@ -192,12 +161,86 @@
         </div>
 
         <div class="w3-container w3-padding-32" id="meet-the-team">
-          <h2 class="w3-border-bottom w3-border-light-grey w3-center">Meet the Team</h2>
-          <!-- Insert group photo here -->
-           <ul>
-            <li>Jim McAllister, Owner</li>
-           </ul>
-          <p></p>
+          <h2 class="w3-border-bottom w3-border-light-grey w3-center">
+            Meet the Team
+          </h2>
+          <!-- TODO: Insert group photo here -->
+          <div class="w3-center w3-margin-top w3-margin-bottom">
+            <img
+              src="/images/team/group_photo_placeholder.jpg"
+              alt="AV Repair Team Photo"
+              class="w3-image w3-round w3-border"
+              style="max-width: 80%; height: auto"
+            />
+            <!-- TODO -->
+            <p class="w3-small w3-text-grey">
+              *Group photo will be added soon*
+            </p>
+          </div>
+
+          <!-- Team Members Grid -->
+          <div class="w3-row-padding w3-center">
+            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+              <div class="w3-card w3-padding w3-hover-shadow">
+                <h3>Jim McAllister</h3>
+                <p class="w3-text-teal">Owner & Lead Technician</p>
+                <p>
+                  U.S. Navy veteran with over 25 years of experience. Leads
+                  operations and ensures every repair meets AV Repair's high
+                  standards.
+                </p>
+              </div>
+            </div>
+
+            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+              <div class="w3-card w3-padding w3-hover-shadow">
+                <h3>William Huynh</h3>
+                <p class="w3-text-teal">Senior Mechanic</p>
+                <p>
+                  Specializes in diagnostics, engine repair, and vehicle
+                  performance tuning. Known for precision and reliability.
+                </p>
+              </div>
+            </div>
+
+            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+              <div class="w3-card w3-padding w3-hover-shadow">
+                <h3>Justin Featherstone</h3>
+                <p class="w3-text-teal">Body & Paint Specialist</p>
+                <p>
+                  Expert in collision repair, painting, and restoration. Brings
+                  vehicles back to their original shine with expert
+                  craftsmanship.
+                </p>
+              </div>
+            </div>
+
+            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+              <div class="w3-card w3-padding w3-hover-shadow">
+                <h3>Maxwell Sprogis</h3>
+                <p class="w3-text-teal">
+                  Customer Service & Operations Coordinator
+                </p>
+                <p>
+                  Manages scheduling, estimates, and customer communications.
+                  Keeps the shop running efficiently and clients informed.
+                </p>
+              </div>
+            </div>
+
+            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+              <div class="w3-card w3-padding w3-hover-shadow">
+                <h3>Daniel Mead</h3>
+                <p class="w3-text-teal">
+                  Apprentice Technician & Digital Media Assistant
+                </p>
+                <p>
+                  Assists with repair work while maintaining the shop's website
+                  and digital media presence. Learning the trade hands-on.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
