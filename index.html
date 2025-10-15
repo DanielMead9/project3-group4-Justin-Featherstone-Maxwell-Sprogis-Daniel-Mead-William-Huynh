@@ -16,6 +16,32 @@
         padding-top: var(--navbar-height);
       }
 
+      .skip-link {
+        position: absolute;
+        left: -999px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+      .skip-link:focus {
+        position: static;
+        left: auto;
+        width: auto;
+        height: auto;
+        padding: 0.5rem 1rem;
+        background: #000;
+        color: #fff;
+        z-index: 10000;
+        display: inline-block;
+      }
+
+      a:focus,
+      button:focus {
+        outline: 3px solid #005a9c;
+        outline-offset: 2px;
+      }
+
       @media (max-width: 600px) {
         :root {
           --navbar-height: 88px;
@@ -79,8 +105,10 @@
     </style>
   </head>
   <body class="w3-light-grey">
+    <!-- Skip link for screen readers and keyboard users -->
+    <a href="#maincontent" class="skip-link">Skip to main content</a>
     <!-- Top navigation -->
-    <div class="w3-top">
+    <div class="w3-top" role="navigation" aria-label="Top navigation">
       <div
         class="w3-bar w3-white w3-card"
         style="align-items: center; justify-content: space-between"
@@ -101,7 +129,14 @@
           <a href="/index.html" class="w3-bar-item w3-button">Home</a>
 
           <div class="w3-dropdown-hover w3-bar-item">
-            <a class="w3-button"> About <i class="fa fa-caret-down"></i> </a>
+            <button
+              class="w3-button"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              About <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </button>
             <div class="w3-dropdown-content w3-bar-block w3-card-4">
               <a href="/who-we-are.html" class="w3-bar-item w3-button"
                 >Who We Are</a
@@ -113,7 +148,14 @@
           </div>
 
           <div class="w3-dropdown-hover w3-bar-item">
-            <a class="w3-button">Services <i class="fa fa-caret-down"></i></a>
+            <button
+              class="w3-button"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Services <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </button>
             <div
               class="w3-dropdown-content w3-bar-block w3-card-4"
               style="max-height: 70vh; overflow: auto"
@@ -201,7 +243,14 @@
           </div>
 
           <div class="w3-dropdown-hover w3-bar-item">
-            <a class="w3-button"> Our Work <i class="fa fa-caret-down"></i> </a>
+            <button
+              class="w3-button"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Our Work <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </button>
             <div class="w3-dropdown-content w3-bar-block w3-card-4">
               <a href="expertise.html" class="w3-bar-item w3-button"
                 >Expertise</a
@@ -234,7 +283,7 @@
       />
     </header>
 
-    <main>
+    <main id="maincontent" tabindex="-1">
       <!-- Main content -->
       <div class="w3-content w3-padding" style="max-width: 1500px">
         <!-- Announcements section -->
@@ -242,11 +291,14 @@
           class="w3-panel w3-pale-yellow w3-leftbar w3-border-yellow w3-center w3-padding-16 w3-animate-opacity"
           id="news"
         >
-          <span
-            onclick="this.parentElement.style.display='none'"
+          <button
+            type="button"
+            aria-label="Close announcement"
             class="w3-button w3-display-topright"
-            >&times;</span
+            onclick="this.closest('#news').style.display='none'"
           >
+            &times;
+          </button>
           <h2 class="w3-border-bottom w3-border-light-grey">
             Mechanics Wanted!
           </h2>
