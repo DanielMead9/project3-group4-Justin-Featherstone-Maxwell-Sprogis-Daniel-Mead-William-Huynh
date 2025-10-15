@@ -6,39 +6,32 @@
     <title>AV Repair</title>
     <link rel="stylesheet" href="w3.css" />
     <style>
-      /* Styles for this page */
-      /* Prevent the fixed top navbar from overlapping page content.
-         Define a CSS variable for the navbar height so it's easy to adjust. */
       :root {
         --navbar-height: 152px;
       }
       .w3-top {
-        z-index: 9999; /* ensure it sits above header images */
+        z-index: 9999;
       }
-      /* Add top padding equal to the navbar height so content starts below it */
       body {
         padding-top: var(--navbar-height);
       }
-      /* On small screens the navbar may wrap and become taller; make padding adaptive */
+
       @media (max-width: 600px) {
         :root {
           --navbar-height: 88px;
         }
       }
 
-      /* Make the grid behave like equal-height rows */
       #service-grid .w3-row-padding {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
       }
 
-      /* Make all columns flexible and consistent */
       #service-grid .w3-col {
         display: flex;
       }
 
-      /* Ensure each card takes full height of its column */
       #service-grid .w3-card-4 {
         display: flex;
         flex-direction: column;
@@ -47,19 +40,16 @@
         height: 100%;
       }
 
-      /* Image consistency */
       #service-grid img {
         width: 100%;
         height: 200px;
         object-fit: cover;
       }
 
-      /* Keep text area balanced */
       #service-grid .w3-container {
-        flex-grow: 1; /* stretches content to fill space */
+        flex-grow: 1;
       }
 
-      /* Make all buttons aligned at the bottom */
       #service-grid .w3-button {
         margin-top: auto;
       }
@@ -74,7 +64,7 @@
         opacity: 1;
         transform: translateY(0);
       }
-      
+
       #news {
         position: relative;
         padding-top: 1.25rem;
@@ -122,7 +112,93 @@
             </div>
           </div>
 
-          <a href="/services.html" class="w3-bar-item w3-button">Services</a>
+          <div class="w3-dropdown-hover w3-bar-item">
+            <a class="w3-button">Services <i class="fa fa-caret-down"></i></a>
+            <div
+              class="w3-dropdown-content w3-bar-block w3-card-4"
+              style="max-height: 70vh; overflow: auto"
+            >
+              <a href="/services.html" class="w3-bar-item w3-button"
+                >All Services</a
+              >
+              <div class="w3-border-top"></div>
+
+              <a
+                href="/services/insured-collision-repairs.html"
+                class="w3-bar-item w3-button"
+                >Insured Collision Repairs</a
+              >
+              <a
+                href="/services/licensed-appraisal.html"
+                class="w3-bar-item w3-button"
+                >Licensed Appraisal</a
+              >
+              <a
+                href="/services/free-written-repair-estimates.html"
+                class="w3-bar-item w3-button"
+                >Free Written Repair Estimates</a
+              >
+              <a
+                href="/services/computerized-maintenance-records.html"
+                class="w3-bar-item w3-button"
+                >Computerized Maintenance Records</a
+              >
+              <a href="/services/restoration.html" class="w3-bar-item w3-button"
+                >Restoration</a
+              >
+              <a
+                href="/services/automotive-technical-mechanical-services.html"
+                class="w3-bar-item w3-button"
+                >Automotive Technical & Mechanical Services</a
+              >
+              <a
+                href="/services/auto-body-repair.html"
+                class="w3-bar-item w3-button"
+                >Auto Body Repair</a
+              >
+              <a
+                href="/services/paint-services.html"
+                class="w3-bar-item w3-button"
+                >Paint Services</a
+              >
+              <a
+                href="/services/frame-and-suspension-repair.html"
+                class="w3-bar-item w3-button"
+                >Frame and Suspension Repair</a
+              >
+              <a href="/services/rust-repair.html" class="w3-bar-item w3-button"
+                >Rust Repair</a
+              >
+              <a
+                href="/services/engine-tuning-and-performance.html"
+                class="w3-bar-item w3-button"
+                >Engine Tuning & Performance</a
+              >
+              <a
+                href="/services/exhaust-systems.html"
+                class="w3-bar-item w3-button"
+                >Exhaust Systems</a
+              >
+              <a
+                href="/services/oil-and-fluid-maintenance.html"
+                class="w3-bar-item w3-button"
+                >Oil & Fluid Maintenance</a
+              >
+              <a
+                href="/services/tire-rotation-and-balancing.html"
+                class="w3-bar-item w3-button"
+                >Tire Rotation & Balancing</a
+              >
+              <a
+                href="/services/brake-repair.html"
+                class="w3-bar-item w3-button"
+                >Brake Repair</a
+              >
+              <a href="/services/tires.html" class="w3-bar-item w3-button"
+                >Tires</a
+              >
+            </div>
+          </div>
 
           <div class="w3-dropdown-hover w3-bar-item">
             <a class="w3-button"> Our Work <i class="fa fa-caret-down"></i> </a>
