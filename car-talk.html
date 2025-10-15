@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Car Talk - AV Repair</title>
+
+    <!-- Same CSS + spacing approach as other pages -->
+    <link rel="stylesheet" href="w3.css" />
+    <style>
+      :root {
+        --navbar-height: 152px;
+      }
+      .w3-top {
+        z-index: 9999;
+      }
+      body {
+        padding-top: var(--navbar-height);
+      }
+      @media (max-width: 600px) {
+        :root {
+          --navbar-height: 88px;
+        }
+      }
+
+      /* Card polish */
+      .ct-card {
+        overflow: hidden;
+      }
+      .ct-summary {
+        margin: 0 0 8px 0;
+      }
+      .ct-meta {
+        font-size: 13px;
+        opacity: 0.8;
+        margin-bottom: 8px;
+      }
+      .ct-content {
+        line-height: 1.7;
+      }
+      .ct-content ul {
+        margin-top: 6px;
+      }
+      .ct-spacer {
+        height: 12px;
+      }
+      .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-out;
+      }
+      .animate-on-scroll.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+
+  <body class="w3-light-grey">
+    <!-- Top navigation (mirrors your other pages) -->
+    <div class="w3-top">
+      <div
+        class="w3-bar w3-white w3-card"
+        style="align-items: center; justify-content: space-between"
+      >
+        <a
+          href="/index.html"
+          class="w3-bar-item w3-button w3-wide"
+          style="padding-top: 10px; padding-bottom: 10px"
+        >
+          <img
+            src="images/AVRepairLogo.webp"
+            alt="AV Repair Inc Logo"
+            style="width: 100%; max-width: 150px"
+          />
+        </a>
+        <div
+          class="w3-right w3-hide-small"
+          style="display: flex; align-items: center"
+        >
+          <a href="/index.html" class="w3-bar-item w3-button">Home</a>
+
+          <div class="w3-dropdown-hover w3-bar-item">
+            <a class="w3-button"> About <i class="fa fa-caret-down"></i></a>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+              <a href="/who-we-are.html" class="w3-bar-item w3-button"
+                >Who We Are</a
+              >
+              <a href="/meet-the-team.html" class="w3-bar-item w3-button"
+                >Meet the Team</a
+              >
+            </div>
+          </div>
+
+          <a href="/services.html" class="w3-bar-item w3-button">Services</a>
+
+          <div class="w3-dropdown-hover w3-bar-item">
+            <a class="w3-button"> Our Work <i class="fa fa-caret-down"></i></a>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+              <a href="/expertise.html" class="w3-bar-item w3-button"
+                >Expertise</a
+              >
+              <a href="/photogallery.html" class="w3-bar-item w3-button"
+                >Photo Gallery</a
+              >
+              <a href="/testimonials.html" class="w3-bar-item w3-button"
+                >Testimonials</a
+              >
+            </div>
+          </div>
+
+          <a href="/car-talk.html" class="w3-bar-item w3-button w3-teal"
+            >Car Talk</a
+          >
+          <a href="/contact.html" class="w3-bar-item w3-button">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header
+      class="w3-display-container w3-content w3-center"
+      style="max-width: 1400px"
+      id="home"
+    >
+      <img
+        class="w3-image"
+        src="/images/AVRepairLogo.webp"
+        alt="AV Repair Inc Logo"
+        style="width: 40%; height: 40%"
+      />
+    </header>
+
+    <main>
+      <div class="w3-content w3-padding" style="max-width: 1100px">
+        <h1 class="w3-center w3-border-bottom w3-border-light-grey">
+          Car Talk
+        </h1>
+        <p class="w3-center">Quick, useful tips from the AV Repair team.</p>
+
+        <!-- Card 1 -->
+        <section
+          class="w3-card-4 w3-white w3-round-large w3-padding ct-card animate-on-scroll"
+        >
+          <h2 class="w3-border-bottom w3-border-light-grey">
+            How to Take Your Car Out of Winter Storage
+          </h2>
+          <p class="ct-summary">
+            What it means: bringing a vehicle back into service after months off
+            the road. The goal is to prevent damage and catch issues before that
+            first spring drive.
+          </p>
+
+          <div class="ct-meta">
+            Mar 7 &nbsp;&middot;&nbsp; Written By Paul MacKay
+          </div>
+
+          <button
+            class="w3-button w3-teal w3-round"
+            aria-expanded="false"
+            aria-controls="ct1"
+            onclick="toggleReadMore('ct1', this)"
+          >
+            Read more
+          </button>
+
+          <div
+            id="ct1"
+            class="w3-hide w3-animate-opacity ct-content w3-margin-top"
+          >
+            <p>
+              <strong>Summer will be here soon.</strong> Sports car, classic car
+              and hobby car owners, start your engines!
+            </p>
+            <p>
+              Actually, before you do, you’ll want to follow some simple steps
+              to bring your summer ride out to play after a long winter.
+            </p>
+            <p>
+              Here’s a checklist of what to do — either on your own or at the
+              shop — if you’ve had your vehicle stored.
+            </p>
+
+            <h3>Top 5 checklist for bringing your car out of winter storage</h3>
+            <ol>
+              <li>
+                <strong>Inspect Battery</strong><br />
+                The most important item to check is the condition of the car’s
+                battery. I hope that you had the battery on a maintainer/tender
+                during the storage period? Look at your maintainer to see that
+                the battery is fully charged. If not, put it on a charger,
+                although the integrity and life of the battery will likely be
+                compromised if the charge has completely depleted. Bottom line,
+                do not attempt to start a stored vehicle with a half drained
+                battery. And don’t boost it. There’s nothing worse that trying
+                to crank a cold engine for the first time in months with a weak
+                battery.<br />
+                When connecting the battery, check the cables and terminals for
+                corrosion/oxidization and clean if necessary. Some modern cars
+                require the battery to remain connected at all times to maintain
+                the on-board computer memory. In this case, a battery maintainer
+                still needs to be used during storage.
+              </li>
+              <li>
+                <strong>Test Engine oil</strong><br />
+                Pull the dipstick to see if there is adequate oil in the engine
+                and add if needed. This oil is now old and should be changed at
+                your earliest opportunity, even if you changed it just before
+                storage. Don’t skip this step. Fresh oil is cheap insurance for
+                the health of your engine.
+              </li>
+              <li>
+                <strong>Examine Other fluids</strong><br />
+                Check the fluid levels for coolant, power steering, brakes and
+                fuel. Did you put fuel stabilizer in the tank before storage? If
+                not, add octane booster and get high-octane gas in the tank. Old
+                gas will make the engine run rough so adding fuel stabilizer is
+                an important precaution prior to storage.
+              </li>
+              <li>
+                <strong>Perform a Visual check</strong><br />
+                Look in the engine bay and under the car for signs of fluid
+                leaks. Observe the electrical wires and hoses, looking for
+                cracks and deterioration. Take a screw driver/wrench to the
+                various clamps that make up the fuel system to ensure that they
+                are tight. Look for signs of unwanted visitors like mice who are
+                notorious for chewing electrical wires. Basically, you want to
+                do a thorough visual check on the key mechanical components
+                before you start the car for the first time and embark on that
+                initial drive of the season.
+              </li>
+              <li>
+                <strong>Check Tires</strong><br />
+                Check tire pressure and correct as necessary to bring to the
+                suggested PSI rating indicated on the sidewall. Look for cracks
+                and bulges in the rubber.
+              </li>
+            </ol>
+
+            <h3>Other items</h3>
+            <p>
+              Look at the brakes to ensure there is adequate pad and rotor
+              material. Look at the suspension components and pull on the
+              control arms and tie-rods to check for excessive play. Check the
+              exhaust and remember to take the steel wool out of the tail pipe
+              or whatever you use to prevent rodents from entering.
+            </p>
+            <p>
+              Now that you’ve done your due-diligence to ensure that your stored
+              vehicle is good to go, put the key in the ignition and fire it up.
+              Expect the engine to run rough at first as it will take several
+              minutes for the fuel to fully circulate to enable a smooth idle.
+              Let the engine idle up to operating temperature before you hit the
+              road. Take it easy in the beginning. Remember, this car hasn’t
+              been driven for months so don’t push it hard on the first run.
+            </p>
+            <p>
+              The above check list may seem excessive but it is important to
+              ensure that your hobby car is ready for the season ahead. You
+              don’t want to be disappointed with mechanical problems resulting
+              from overlooking an important detail in preparing to bring a
+              vehicle out of prolonged storage. Spring is just a few weeks away
+              and with lots of heavy rain to wash the salt and crud off the
+              roads, classic cars will be back on the scene. Just watch out for
+              all the potholes – you’re hobby car will be less forgiving than
+              the daily driver.
+            </p>
+
+            <h3>And a few final things:</h3>
+            <ul>
+              <li>Have brake pads and shocks examined.</li>
+              <li>
+                Verify that headlights, brights, taillights and blinkers are
+                operating.
+              </li>
+              <li>
+                Clear the exhaust pipe, if you plugged it to keep out mice.
+              </li>
+              <li>
+                Inspect the windshield wipers to see if the rubber is cracked or
+                brittle.
+              </li>
+              <li>
+                Wash the vehicle to remove any dust or dirt that accumulated.
+              </li>
+              <li>Air out the interior.</li>
+            </ul>
+
+            <p>
+              <em
+                >But of course you could always bring it to AV Repair and we’ll
+                do it all for you.</em
+              >
+            </p>
+            <p class="w3-right">Paul MacKay</p>
+          </div>
+        </section>
+
+        <div class="ct-spacer"></div>
+
+        <!-- Card 2 -->
+        <section
+          class="w3-card-4 w3-white w3-round-large w3-padding ct-card animate-on-scroll"
+        >
+          <h2 class="w3-border-bottom w3-border-light-grey">
+            Accidents Happen…
+          </h2>
+          <p class="ct-summary">
+            What to keep in mind at the scene and right after—so you’re
+            protected and the claim goes smoothly.
+          </p>
+
+          <div class="ct-meta">
+            Feb 11 &nbsp;&middot;&nbsp; Written By Paul MacKay
+          </div>
+
+          <button
+            class="w3-button w3-teal w3-round"
+            aria-expanded="false"
+            aria-controls="ct2"
+            onclick="toggleReadMore('ct2', this)"
+          >
+            Read more
+          </button>
+
+          <div
+            id="ct2"
+            class="w3-hide w3-animate-opacity ct-content w3-margin-top"
+          >
+            <p>
+              Accidents are something no one really prepares for although
+              everyone should as statistics show that during the course of the
+              average driver’s lifetime they will be involved in 3 to 4 of them.
+              So a little preventive medicine could go a long way.
+            </p>
+            <p>
+              Any accident, even a minor fender bender, can rattle the most
+              even-keeled of us. Let’s talk about what to keep in mind and what
+              to do at the accident scene. You may even want to print this list
+              out and keep it in your glove compartment:
+            </p>
+            <ul>
+              <li>
+                Check to see if there are any physical injuries. If there are,
+                don’t think twice, call 911 and call the local police.
+              </li>
+              <li>
+                Even though you may not feel hurt, don’t take chances, get
+                checked out at a local hospital. It’s for your own protection as
+                sometimes the symptoms of injury aren’t obvious to anyone except
+                a doctor.
+              </li>
+              <li>
+                Make sure to get all the information from the other party
+                including driver’s license, license plate number, vehicle
+                registration, vehicle id (VIN#) and the other party’s insurance
+                company name.
+              </li>
+              <li>
+                If you have your phone or a camera make sure to take pictures of
+                the damaged areas of both vehicles, any objects involved (such
+                as guard rails, telephone poles, or buildings) and the accident
+                scene. Especially skid marks.
+              </li>
+              <li>
+                Also, take pictures of the location including street signs and
+                other identifying information or landmarks if possible.
+              </li>
+              <li>
+                Fill out a police accident report immediately, keep a copy for
+                yourself and submit it to your insurance company.
+              </li>
+              <li>
+                If there are witness try to get names and phone number and if
+                possible a statement from them, preferably written or recorded
+                on your cell phone, at the scene as to what they saw happen.
+              </li>
+              <li>
+                If the police are involved ask them if anyone is going be cited.
+              </li>
+              <li>Report the accident to you insurance company immediately.</li>
+              <li>
+                If your vehicle needs to be towed, tell the towing company where
+                you want your car taken to. Remember, the insurance company
+                usually pays for the towing.
+              </li>
+              <li>Even though it’s hard, try to remain calm.</li>
+              <li>
+                After you get home go to your computer and google “What should I
+                do after an accident in Massachusetts” and if you find something
+                you didn’t take care of at the scene, don’t wait, take care of
+                it right away.
+              </li>
+            </ul>
+            <p>
+              It may seem devastating at the time but always keep in mind that a
+              car can be fixed. It’s not the end of the world. A professional,
+              licensed repair shop, like AV Repair, will make your car as good
+              as new. We do it all the time.
+            </p>
+            <p class="w3-right">Paul MacKay</p>
+          </div>
+        </section>
+
+        <div class="ct-spacer"></div>
+
+        <!-- Extra Card 3 -->
+        <section
+          class="w3-card-4 w3-white w3-round-large w3-padding ct-card animate-on-scroll"
+        >
+          <h2 class="w3-border-bottom w3-border-light-grey">
+            Cold Mornings & Tire Pressure
+          </h2>
+          <p class="ct-summary">
+            Why your TPMS light pops on with temperature swings—and what to do.
+          </p>
+          <button
+            class="w3-button w3-teal w3-round"
+            aria-expanded="false"
+            aria-controls="ct3"
+            onclick="toggleReadMore('ct3', this)"
+          >
+            Read more
+          </button>
+          <div
+            id="ct3"
+            class="w3-hide w3-animate-opacity ct-content w3-margin-top"
+          >
+            <ul>
+              <li>
+                Air contracts in cold weather, dropping PSI ~1 PSI per 10°F. A
+                chilly night can trigger TPMS.
+              </li>
+              <li>
+                Check PSI “cold” (before driving). Inflate to the door-jamb
+                placard—<em>not</em> the sidewall max.
+              </li>
+              <li>
+                Underinflation = poor handling + faster tire wear + worse MPG.
+                Overinflation = harsh ride + center wear.
+              </li>
+              <li>
+                If the light stays on after correcting PSI, swing by—we’ll check
+                sensors and slow leaks.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <div class="ct-spacer"></div>
+
+        <!-- Extra Card 4 -->
+        <section
+          class="w3-card-4 w3-white w3-round-large w3-padding ct-card animate-on-scroll"
+        >
+          <h2 class="w3-border-bottom w3-border-light-grey">
+            Rock Chip: Repair or Replace the Windshield?
+          </h2>
+          <p class="ct-summary">
+            Small damage can often be repaired quickly if you act fast.
+          </p>
+          <button
+            class="w3-button w3-teal w3-round"
+            aria-expanded="false"
+            aria-controls="ct4"
+            onclick="toggleReadMore('ct4', this)"
+          >
+            Read more
+          </button>
+          <div
+            id="ct4"
+            class="w3-hide w3-animate-opacity ct-content w3-margin-top"
+          >
+            <ul>
+              <li>
+                <strong>Repair:</strong> chips under ~1/4", short cracks, and
+                damage away from the driver’s direct view.
+              </li>
+              <li>
+                <strong>Replace:</strong> long cracks, multiple impacts, edge
+                cracks, or damage in your primary sightline.
+              </li>
+              <li>
+                Time matters—chips spread with heat/cold and bumps. Cover with
+                clear tape, avoid car washes, and book a visit.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <div class="ct-spacer"></div>
+
+        <!-- Extra Card 5 -->
+        <section
+          class="w3-card-4 w3-white w3-round-large w3-padding ct-card animate-on-scroll"
+        >
+          <h2 class="w3-border-bottom w3-border-light-grey">
+            After a Fender-Bender: Hidden Damage Checklist
+          </h2>
+          <p class="ct-summary">
+            It looked minor—here’s how to spot issues before they get pricey.
+          </p>
+          <button
+            class="w3-button w3-teal w3-round"
+            aria-expanded="false"
+            aria-controls="ct5"
+            onclick="toggleReadMore('ct5', this)"
+          >
+            Read more
+          </button>
+          <div
+            id="ct5"
+            class="w3-hide w3-animate-opacity ct-content w3-margin-top"
+          >
+            <ul>
+              <li>
+                Panel gaps that suddenly look uneven or doors that “catch.”
+              </li>
+              <li>Steering wheel off-center while driving straight.</li>
+              <li>
+                Vibration, new tire wear patterns, or rubbing noises over bumps.
+              </li>
+              <li>
+                Sensor warnings (parking, lane, radar) after repairs—calibration
+                might be needed.
+              </li>
+            </ul>
+            <p>
+              Not sure? Swing by AV Repair and we’ll put it on a lift for a
+              quick look.
+            </p>
+          </div>
+        </section>
+
+        <div class="w3-section"></div>
+      </div>
+    </main>
+
+    <!-- Your scroll animation script (already used across the site) -->
+    <script src="/animation.js"></script>
+
+    <!-- Read more/see less toggler -->
+    <script>
+      function toggleReadMore(id, btn) {
+        const panel = document.getElementById(id);
+        const isHidden = panel.classList.contains("w3-hide");
+        panel.classList.toggle("w3-hide", !isHidden);
+        btn.setAttribute("aria-expanded", String(isHidden));
+        btn.textContent = isHidden ? "See less" : "Read more";
+      }
+    </script>
+  </body>
+</html>
