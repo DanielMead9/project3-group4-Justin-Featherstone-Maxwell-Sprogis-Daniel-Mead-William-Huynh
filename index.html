@@ -4,40 +4,61 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AV Repair</title>
-    <link rel="stylesheet" href="w3.css" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" href="/w3.css" />
     <style>
-      /* Prevent the fixed top navbar from overlapping page content.
-         Define a CSS variable for the navbar height so it's easy to adjust. */
       :root {
         --navbar-height: 152px;
       }
       .w3-top {
-        z-index: 9999; /* ensure it sits above header images */
+        z-index: 9999;
       }
-      /* Add top padding equal to the navbar height so content starts below it */
       body {
         padding-top: var(--navbar-height);
       }
-      /* On small screens the navbar may wrap and become taller; make padding adaptive */
+
+      .skip-link {
+        position: absolute;
+        left: -999px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+      .skip-link:focus {
+        position: static;
+        left: auto;
+        width: auto;
+        height: auto;
+        padding: 0.5rem 1rem;
+        background: #000;
+        color: #fff;
+        z-index: 10000;
+        display: inline-block;
+      }
+
+      a:focus,
+      button:focus {
+        outline: 3px solid #005a9c;
+        outline-offset: 2px;
+      }
+
       @media (max-width: 600px) {
         :root {
           --navbar-height: 88px;
         }
       }
 
-      /* Make the grid behave like equal-height rows */
       #service-grid .w3-row-padding {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
       }
 
-      /* Make all columns flexible and consistent */
       #service-grid .w3-col {
         display: flex;
       }
 
-      /* Ensure each card takes full height of its column */
       #service-grid .w3-card-4 {
         display: flex;
         flex-direction: column;
@@ -46,27 +67,50 @@
         height: 100%;
       }
 
-      /* Image consistency */
       #service-grid img {
         width: 100%;
         height: 200px;
         object-fit: cover;
       }
 
-      /* Keep text area balanced */
       #service-grid .w3-container {
-        flex-grow: 1; /* stretches content to fill space */
+        flex-grow: 1;
       }
 
-      /* Optional: Make all buttons aligned at the bottom */
       #service-grid .w3-button {
         margin-top: auto;
       }
+
+      .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-out;
+      }
+
+      .animate-on-scroll.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      #news {
+        position: relative;
+        padding-top: 1.25rem;
+      }
+
+      #news .w3-display-topright {
+        position: absolute !important;
+        top: 0.5rem;
+        right: 0.5rem;
+        transform: none;
+      }
     </style>
+    <link rel="stylesheet" href="/dark-mode.css" />
   </head>
   <body class="w3-light-grey">
+    <!-- Skip link for screen readers and keyboard users -->
+    <a href="#maincontent" class="skip-link">Skip to main content</a>
     <!-- Top navigation -->
-    <div class="w3-top">
+    <div class="w3-top" role="navigation" aria-label="Top navigation">
       <div
         class="w3-bar w3-white w3-card"
         style="align-items: center; justify-content: space-between"
@@ -87,21 +131,128 @@
           <a href="/index.html" class="w3-bar-item w3-button">Home</a>
 
           <div class="w3-dropdown-hover w3-bar-item">
-            <a class="w3-button"> About <i class="fa fa-caret-down"></i> </a>
+            <button
+              class="w3-button"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              About <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </button>
             <div class="w3-dropdown-content w3-bar-block w3-card-4">
               <a href="/who-we-are.html" class="w3-bar-item w3-button"
                 >Who We Are</a
               >
-              <a href="/meet-the-team.html" class="w3-bar-item w3-button"
-                >Meet the Team</a
+              <a href="/join-the-team.html" class="w3-bar-item w3-button"
+                >Join the Team</a
               >
             </div>
           </div>
 
-          <a href="/services.html" class="w3-bar-item w3-button">Services</a>
+          <div class="w3-dropdown-hover w3-bar-item">
+            <button
+              class="w3-button"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Services <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </button>
+            <div
+              class="w3-dropdown-content w3-bar-block w3-card-4"
+              style="max-height: 70vh; overflow: auto"
+            >
+              <a href="/services.html" class="w3-bar-item w3-button"
+                >All Services</a
+              >
+              <div class="w3-border-top"></div>
+
+              <a
+                href="/services/insured-collision-repairs.html"
+                class="w3-bar-item w3-button"
+                >Insured Collision Repairs</a
+              >
+              <a
+                href="/services/licensed-appraisal.html"
+                class="w3-bar-item w3-button"
+                >Licensed Appraisal</a
+              >
+              <a
+                href="/services/free-written-repair-estimates.html"
+                class="w3-bar-item w3-button"
+                >Free Written Repair Estimates</a
+              >
+              <a
+                href="/services/computerized-maintenance-records.html"
+                class="w3-bar-item w3-button"
+                >Computerized Maintenance Records</a
+              >
+              <a href="/services/restoration.html" class="w3-bar-item w3-button"
+                >Restoration</a
+              >
+              <a
+                href="/services/automotive-technical-mechanical-services.html"
+                class="w3-bar-item w3-button"
+                >Automotive Technical & Mechanical Services</a
+              >
+              <a
+                href="/services/auto-body-repair.html"
+                class="w3-bar-item w3-button"
+                >Auto Body Repair</a
+              >
+              <a
+                href="/services/paint-services.html"
+                class="w3-bar-item w3-button"
+                >Paint Services</a
+              >
+              <a
+                href="/services/frame-and-suspension-repair.html"
+                class="w3-bar-item w3-button"
+                >Frame and Suspension Repair</a
+              >
+              <a href="/services/rust-repair.html" class="w3-bar-item w3-button"
+                >Rust Repair</a
+              >
+              <a
+                href="/services/engine-tuning-and-performance.html"
+                class="w3-bar-item w3-button"
+                >Engine Tuning & Performance</a
+              >
+              <a
+                href="/services/exhaust-systems.html"
+                class="w3-bar-item w3-button"
+                >Exhaust Systems</a
+              >
+              <a
+                href="/services/oil-and-fluid-maintenance.html"
+                class="w3-bar-item w3-button"
+                >Oil & Fluid Maintenance</a
+              >
+              <a
+                href="/services/tire-rotation-and-balancing.html"
+                class="w3-bar-item w3-button"
+                >Tire Rotation & Balancing</a
+              >
+              <a
+                href="/services/brake-repair.html"
+                class="w3-bar-item w3-button"
+                >Brake Repair</a
+              >
+              <a href="/services/tires.html" class="w3-bar-item w3-button"
+                >Tires</a
+              >
+            </div>
+          </div>
 
           <div class="w3-dropdown-hover w3-bar-item">
-            <a class="w3-button"> Our Work <i class="fa fa-caret-down"></i> </a>
+            <button
+              class="w3-button"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Our Work <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </button>
             <div class="w3-dropdown-content w3-bar-block w3-card-4">
               <a href="expertise.html" class="w3-bar-item w3-button"
                 >Expertise</a
@@ -134,14 +285,22 @@
       />
     </header>
 
-    <main>
+    <main id="maincontent" tabindex="-1">
       <!-- Main content -->
       <div class="w3-content w3-padding" style="max-width: 1500px">
         <!-- Announcements section -->
         <div
-          class="w3-panel w3-pale-yellow w3-leftbar w3-border-yellow w3-center w3-padding-16"
+          class="w3-panel w3-pale-yellow w3-leftbar w3-border-yellow w3-center w3-padding-16 w3-animate-opacity"
           id="news"
         >
+          <button
+            type="button"
+            aria-label="Close announcement"
+            class="w3-button w3-display-topright"
+            onclick="this.closest('#news').style.display='none'"
+          >
+            &times;
+          </button>
           <h2 class="w3-border-bottom w3-border-light-grey">
             Mechanics Wanted!
           </h2>
@@ -228,7 +387,7 @@
           <!-- Grid row -->
           <div class="w3-row-padding w3-center">
             <!-- Insured Collision Repair -->
-            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+            <div class="w3-col l4 m6 s12 w3-margin-bottom animate-on-scroll">
               <div class="w3-card-4 w3-hover-shadow">
                 <img
                   src="/images/services/collision.webp"
@@ -243,7 +402,7 @@
                     Repair your vehicle after an accident with our expert team.
                   </p>
                   <a
-                    href="/services/insuredcollisionrepair.html"
+                    href="/services/insured-collision-repairs.html"
                     class="w3-button w3-teal w3-margin-top"
                     >Learn More</a
                   >
@@ -252,7 +411,7 @@
             </div>
 
             <!-- Body Repair -->
-            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+            <div class="w3-col l4 m6 s12 w3-margin-bottom animate-on-scroll">
               <div class="w3-card-4 w3-hover-shadow">
                 <img
                   src="/images/services/body_repair.webp"
@@ -267,7 +426,7 @@
                     Comprehensive body repair services to restore your vehicle.
                   </p>
                   <a
-                    href="/services/bodyrepair.html"
+                    href="/services/auto-body-repair.html"
                     class="w3-button w3-teal w3-margin-top"
                     >Find Out How</a
                   >
@@ -276,7 +435,7 @@
             </div>
 
             <!-- Painting -->
-            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+            <div class="w3-col l4 m6 s12 w3-margin-bottom animate-on-scroll">
               <div class="w3-card-4 w3-hover-shadow">
                 <img
                   src="/images/services/paintwork.webp"
@@ -292,7 +451,7 @@
                     services.
                   </p>
                   <a
-                    href="/services/painting.html"
+                    href="/services/paint-services.html"
                     class="w3-button w3-teal w3-margin-top"
                     >Learn More</a
                   >
@@ -301,7 +460,7 @@
             </div>
 
             <!-- Mechanical -->
-            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+            <div class="w3-col l4 m6 s12 w3-margin-bottom animate-on-scroll">
               <div class="w3-card-4 w3-hover-shadow">
                 <img
                   src="/images/services/mechanical.webp"
@@ -317,7 +476,7 @@
                     vehicle types.
                   </p>
                   <a
-                    href="/services/mechanical.html"
+                    href="/services/automotive-technical-mechanical-services.html"
                     class="w3-button w3-teal w3-margin-top"
                     >Find Out</a
                   >
@@ -326,7 +485,7 @@
             </div>
 
             <!-- Rust Repair -->
-            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+            <div class="w3-col l4 m6 s12 w3-margin-bottom animate-on-scroll">
               <div class="w3-card-4 w3-hover-shadow">
                 <img
                   src="/images/services/rust.webp"
@@ -339,7 +498,7 @@
                   <h3>Rust Repair</h3>
                   <p>Remove rust and corrosion from your vehicle's body.</p>
                   <a
-                    href="/services/rustrepair.html"
+                    href="/services/rust-repair.html"
                     class="w3-button w3-teal w3-margin-top"
                     >Learn How</a
                   >
@@ -348,7 +507,7 @@
             </div>
 
             <!-- Restoration -->
-            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+            <div class="w3-col l4 m6 s12 w3-margin-bottom animate-on-scroll">
               <div class="w3-card-4 w3-hover-shadow">
                 <img
                   src="/images/services/restoration.webp"
@@ -373,7 +532,7 @@
             </div>
 
             <!-- Frame and Suspension Repair -->
-            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+            <div class="w3-col l4 m6 s12 w3-margin-bottom animate-on-scroll">
               <div class="w3-card-4 w3-hover-shadow">
                 <img
                   src="/images/services/frame_suspension.webp"
@@ -389,7 +548,7 @@
                     frame and suspension repairs.
                   </p>
                   <a
-                    href="/services/frameandsuspensionrepair.html"
+                    href="/services/frame-and-suspension-repair.html"
                     class="w3-button w3-teal w3-margin-top"
                     >Learn More</a
                   >
@@ -398,7 +557,7 @@
             </div>
 
             <!-- Engine Tuning and Performance -->
-            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+            <div class="w3-col l4 m6 s12 w3-margin-bottom animate-on-scroll">
               <div class="w3-card-4 w3-hover-shadow">
                 <img
                   src="/images/services/engine.webp"
@@ -414,7 +573,7 @@
                     tuning.
                   </p>
                   <a
-                    href="/services/enginetuning.html"
+                    href="/services/engine-tuning-and-performance.html"
                     class="w3-button w3-teal w3-margin-top"
                     >Details</a
                   >
@@ -423,7 +582,7 @@
             </div>
 
             <!-- Exhaust Systems -->
-            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+            <div class="w3-col l4 m6 s12 w3-margin-bottom animate-on-scroll">
               <div class="w3-card-4 w3-hover-shadow">
                 <img
                   src="/images/services/exhaust.webp"
@@ -439,7 +598,7 @@
                     exhaust system repairs.
                   </p>
                   <a
-                    href="/services/exhaust.html"
+                    href="/services/exhaust-systems.html"
                     class="w3-button w3-teal w3-margin-top"
                     >Explore</a
                   >
@@ -448,7 +607,7 @@
             </div>
 
             <!-- Oil and Fluid Maintenance -->
-            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+            <div class="w3-col l4 m6 s12 w3-margin-bottom animate-on-scroll">
               <div class="w3-card-4 w3-hover-shadow">
                 <img
                   src="/images/services/oil_fluid.webp"
@@ -464,7 +623,7 @@
                     fluid maintenance.
                   </p>
                   <a
-                    href="/services/oilandfluidmaintenance.html"
+                    href="/services/automotive-technical-mechanical-services.html"
                     class="w3-button w3-teal w3-margin-top"
                     >What We Do</a
                   >
@@ -473,7 +632,7 @@
             </div>
 
             <!-- Tire Rotation and Balancing -->
-            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+            <div class="w3-col l4 m6 s12 w3-margin-bottom animate-on-scroll">
               <div class="w3-card-4 w3-hover-shadow">
                 <img
                   src="/images/services/wheel.webp"
@@ -489,7 +648,7 @@
                     balancing.
                   </p>
                   <a
-                    href="/services/tirerotationandbalancing.html"
+                    href="/services/tire-rotation-and-balancing.html"
                     class="w3-button w3-teal w3-margin-top"
                     >Find Out</a
                   >
@@ -498,51 +657,37 @@
             </div>
           </div>
         </div>
-
-        <!-- Contact -->
-        <div class="w3-container w3-padding-32" id="contact">
-          <h2 class="w3-border-bottom w3-border-light-grey">Contact</h2>
-          <form class="w3-container w3-white w3-card-4 w3-padding" action="#">
-            <p>
-              <label>Name</label>
-              <input
-                class="w3-input w3-border"
-                type="text"
-                placeholder="Your name"
-              />
-            </p>
-            <p>
-              <label>Email</label>
-              <input
-                class="w3-input w3-border"
-                type="email"
-                placeholder="Your email"
-              />
-            </p>
-            <p>
-              <label>Message</label>
-              <textarea
-                class="w3-input w3-border"
-                rows="4"
-                placeholder="Write something..."
-              ></textarea>
-            </p>
-            <p>
-              <button class="w3-button w3-black" type="submit">Send</button>
-            </p>
-          </form>
-        </div>
+        <!-- Animate the above elements -->
+        <script src="animation.js"></script>
       </div>
     </main>
 
     <!-- Footer -->
-    <footer class="w3-center w3-black w3-padding-16">
+    <footer
+      class="w3-center w3-black w3-padding-16"
+      style="position: relative; z-index: 1"
+    >
       <p class="w3-small">
         AV Repair, Inc. | 2350 Turnpike St, North Andover, MA 01845 |
         <a href="tel:+19789750957">(978) 975-0957</a> |
         <a href="mailto:avrepairinc@gmail.com">avrepairinc@gmail.com</a> |
         <a href="https://www.facebook.com/groups/1889685858011404/">Facebook</a>
       </p>
+      <button
+        id="themeToggle"
+        aria-label="Toggle dark mode theme"
+        aria-pressed="false"
+        class="w3-button w3-round-large w3-border w3-light-grey w3-hover-dark-grey"
+        style="
+          position: absolute;
+          right: 16px;
+          top: 50%;
+          transform: translateY(-50%);
+        "
+      >
+        🌙 Dark Mode
+      </button>
+      <script src="dark-mode.js"></script>
     </footer>
   </body>
 </html>

@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Who We Are - AV Repair</title>
+    <title>Contact Us - AV Repair</title>
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="stylesheet" href="w3.css" />
+    <link rel="stylesheet" href="/w3.css" />
     <style>
       /* Prevent the fixed top navbar from overlapping page content.
          Define a CSS variable for the navbar height so it's easy to adjust. */
@@ -40,7 +40,7 @@
           class="w3-bar-item w3-button w3-wide"
           style="padding-top: 10px; padding-bottom: 10px"
           ><img
-            src="images/AVRepairLogo.webp"
+            src="/images/AVRepairLogo.webp"
             alt="AV Repair Inc Logo"
             style="width: 100%; max-width: 125px"
         /></a>
@@ -188,150 +188,66 @@
       <!-- Main content -->
       <div class="w3-content w3-padding" style="max-width: 1100px">
         <h1 class="w3-border-bottom w3-border-light-grey w3-center">
-          Who We Are
+          Join the Team
         </h1>
-        <div class="w3-container" id="who-we-are">
-          <p>
-            Since 1988, whether you need auto body repair, mechanical services,
-            body painting or restoration services, our team of skilled
-            technicians will do it.
-          </p>
-          <h2 class="w3-border-bottom w3-border-light-grey">Our Mission</h2>
-          <p>
-            To ensure your satisfaction, whether you come for routine
-            maintenance or major repairs. Word of mouth is our best salesman.
-          </p>
-          <blockquote class="w3-large">
-            <p>
-              “Jim and his team are my go-to auto service shop. I've been taking
-              my cars to him for over 25 years. They've done everything from
-              body work to engine repair. I wouldn't think of taking a vehicle
-              of mine anywhere else.”
-            </p>
-          </blockquote>
-          <p class="w3-right w3-opacity">- Paul M. Andover MA</p>
-          <a href="/testimonials.html" class="w3-button w3-teal w3-margin-top"
-            >View More Testimonials</a
+
+        <h2 class="w3-border-bottom w3-border-light-grey">
+          We are Hiring! Contact us.
+        </h2>
+
+        <p>
+          We are looking to hire experienced mechanics and auto body
+          technicians.
+        </p>
+        <p>Complete the form and we'll be in touch soon.</p>
+
+        <!-- Contact form. NOTE: The backend function for the form has not been implemented. -->
+        <div class="w3-container w3-padding-32" id="contact">
+          <form
+            class="w3-container w3-white w3-card-4 w3-padding"
+            action="/services/handle-form"
+            method="POST"
           >
-          <br />
-          <h3 class="w3-border-bottom w3-border-light-grey">
-            We pride ourselves on building relationships with each of our
-            clients. We value every customer who walks through the door, no
-            matter how big or small the repair is.
-          </h3>
-          <p>
-            At AV Repair, our only goal is to provide you with exceptional and
-            honest repair work, without the inflated prices. We provide bumper
-            to bumper service and use quality parts and fluids. We want you to
-            feel confident that you will get professional service that never
-            leaves you feeling cheated.
-          </p>
-          <h2>What We Do</h2>
-          <div class="w3-row">
-            <div class="w3-half">
-              <ul class="w3-ul">
-                <li>Auto body and paint repairs</li>
-                <li>Frame and suspension repairs</li>
-                <li>Engine tune-up</li>
-                <li>Insured collision repair</li>
-                <li>Tires</li>
-                <li>Brake service</li>
-              </ul>
-            </div>
-            <div class="w3-half">
-              <ul class="w3-ul">
-                <li>Exhaust systems</li>
-                <li>Cooling systems</li>
-                <li>Air conditioning</li>
-                <li>Front end alignment</li>
-                <li>Oil and fluid maintenance</li>
-                <li>Tire rotation and balancing</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="w3-container w3-padding-32" id="meet-the-team">
-          <h2 class="w3-border-bottom w3-border-light-grey w3-center">
-            Meet the Team
-          </h2>
-          <!-- TODO: Insert group photo here -->
-          <div class="w3-center w3-margin-top w3-margin-bottom">
-            <img
-              src="/images/team/group_photo_placeholder.jpg"
-              alt="AV Repair Team Photo"
-              class="w3-image w3-round w3-border"
-              style="max-width: 80%; height: auto"
-            />
-            <!-- TODO -->
-            <p class="w3-small w3-text-grey">
-              *Group photo will be added soon*
+            <p>
+              <label>Name</label>
+              <input
+                class="w3-input w3-border"
+                type="text"
+                placeholder="Your name"
+                required
+              />
             </p>
-          </div>
-
-          <!-- Team Members Grid -->
-          <div class="w3-row-padding w3-center">
-            <div class="w3-col l4 m6 s12 w3-margin-bottom">
-              <div class="w3-card w3-padding w3-hover-shadow">
-                <h3>Jim McAllister</h3>
-                <p class="w3-text-teal">Owner & Lead Technician</p>
-                <p>
-                  U.S. Navy veteran with over 25 years of experience. Leads
-                  operations and ensures every repair meets AV Repair's high
-                  standards.
-                </p>
-              </div>
-            </div>
-
-            <div class="w3-col l4 m6 s12 w3-margin-bottom">
-              <div class="w3-card w3-padding w3-hover-shadow">
-                <h3>William Huynh</h3>
-                <p class="w3-text-teal">Senior Mechanic</p>
-                <p>
-                  Specializes in diagnostics, engine repair, and vehicle
-                  performance tuning. Known for precision and reliability.
-                </p>
-              </div>
-            </div>
-
-            <div class="w3-col l4 m6 s12 w3-margin-bottom">
-              <div class="w3-card w3-padding w3-hover-shadow">
-                <h3>Justin Featherstone</h3>
-                <p class="w3-text-teal">Body & Paint Specialist</p>
-                <p>
-                  Expert in collision repair, painting, and restoration. Brings
-                  vehicles back to their original shine with expert
-                  craftsmanship.
-                </p>
-              </div>
-            </div>
-
-            <div class="w3-col l4 m6 s12 w3-margin-bottom">
-              <div class="w3-card w3-padding w3-hover-shadow">
-                <h3>Maxwell Sprogis</h3>
-                <p class="w3-text-teal">
-                  Customer Service & Operations Coordinator
-                </p>
-                <p>
-                  Manages scheduling, estimates, and customer communications.
-                  Keeps the shop running efficiently and clients informed.
-                </p>
-              </div>
-            </div>
-
-            <div class="w3-col l4 m6 s12 w3-margin-bottom">
-              <div class="w3-card w3-padding w3-hover-shadow">
-                <h3>Daniel Mead</h3>
-                <p class="w3-text-teal">
-                  Apprentice Technician & Digital Media Assistant
-                </p>
-                <p>
-                  Assists with repair work while maintaining the shop's website
-                  and digital media presence. Learning the trade hands-on.
-                </p>
-              </div>
-            </div>
-          </div>
+            <p>
+              <label>Phone</label>
+              <input
+                class="w3-input w3-border"
+                type="tel"
+                placeholder="Your phone number"
+                required
+              />
+            </p>
+            <p>
+              <label>Email</label>
+              <input
+                class="w3-input w3-border"
+                type="email"
+                placeholder="Your email address"
+                required
+              />
+            </p>
+            <p>
+              <label>Tell Us About Yourself</label>
+              <textarea
+                class="w3-input w3-border"
+                rows="4"
+                placeholder="Write something..."
+                required
+              ></textarea>
+            </p>
+            <p>
+              <button class="w3-button w3-black" type="submit">Send</button>
+            </p>
+          </form>
         </div>
       </div>
     </main>

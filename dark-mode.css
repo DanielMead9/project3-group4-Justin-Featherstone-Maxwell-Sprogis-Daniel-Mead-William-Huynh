@@ -1,0 +1,18 @@
+/* CSS classes for dark mode */
+.dark-mode {
+  background-color: #121212 !important;
+  color: #f1f1f1 !important;
+}
+
+.dark-mode .w3-card,
+.dark-mode .w3-container,
+.dark-mode .w3-bar {
+  background-color: #1e1e1e !important;
+  color: #f1f1f1 !important;
+}
+
+.dark-mode #themeToggle {
+  background-color: #333 !important;
+  color: #f1f1f1 !important;
+  border-color: #555 !important;
+}
