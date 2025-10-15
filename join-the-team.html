@@ -25,6 +25,7 @@
         }
       }
     </style>
+    <link rel="stylesheet" href="/dark-mode.css" />
   </head>
   <body class="w3-light-grey">
     <!-- Top navigation -->
@@ -251,13 +252,31 @@
     </main>
 
     <!-- Footer -->
-    <footer class="w3-center w3-black w3-padding-16">
+    <footer
+      class="w3-center w3-black w3-padding-16"
+      style="position: relative; z-index: 1"
+    >
       <p class="w3-small">
         AV Repair, Inc. | 2350 Turnpike St, North Andover, MA 01845 |
         <a href="tel:+19789750957">(978) 975-0957</a> |
         <a href="mailto:avrepairinc@gmail.com">avrepairinc@gmail.com</a> |
         <a href="https://www.facebook.com/groups/1889685858011404/">Facebook</a>
       </p>
+      <button
+        id="themeToggle"
+        aria-label="Toggle dark mode theme"
+        aria-pressed="false"
+        class="w3-button w3-round-large w3-border w3-light-grey w3-hover-dark-grey"
+        style="
+          position: absolute;
+          right: 16px;
+          top: 50%;
+          transform: translateY(-50%);
+        "
+      >
+        🌙 Dark Mode
+      </button>
+      <script src="dark-mode.js"></script>
     </footer>
   </body>
 </html>
