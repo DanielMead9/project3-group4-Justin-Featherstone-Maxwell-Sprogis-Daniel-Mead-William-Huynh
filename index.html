@@ -6,6 +6,7 @@
     <title>AV Repair</title>
     <link rel="stylesheet" href="w3.css" />
     <style>
+      /* Styles for this page */
       /* Prevent the fixed top navbar from overlapping page content.
          Define a CSS variable for the navbar height so it's easy to adjust. */
       :root {
@@ -58,9 +59,32 @@
         flex-grow: 1; /* stretches content to fill space */
       }
 
-      /* Optional: Make all buttons aligned at the bottom */
+      /* Make all buttons aligned at the bottom */
       #service-grid .w3-button {
         margin-top: auto;
+      }
+
+      .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-out;
+      }
+
+      .animate-on-scroll.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      #news {
+        position: relative;
+        padding-top: 1.25rem;
+      }
+
+      #news .w3-display-topright {
+        position: absolute !important;
+        top: 0.5rem;
+        right: 0.5rem;
+        transform: none;
       }
     </style>
   </head>
@@ -139,9 +163,14 @@
       <div class="w3-content w3-padding" style="max-width: 1500px">
         <!-- Announcements section -->
         <div
-          class="w3-panel w3-pale-yellow w3-leftbar w3-border-yellow w3-center w3-padding-16"
+          class="w3-panel w3-pale-yellow w3-leftbar w3-border-yellow w3-center w3-padding-16 w3-animate-opacity"
           id="news"
         >
+          <span
+            onclick="this.parentElement.style.display='none'"
+            class="w3-button w3-display-topright"
+            >&times;</span
+          >
           <h2 class="w3-border-bottom w3-border-light-grey">
             Mechanics Wanted!
           </h2>
@@ -228,7 +257,7 @@
           <!-- Grid row -->
           <div class="w3-row-padding w3-center">
             <!-- Insured Collision Repair -->
-            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+            <div class="w3-col l4 m6 s12 w3-margin-bottom animate-on-scroll">
               <div class="w3-card-4 w3-hover-shadow">
                 <img
                   src="/images/services/collision.webp"
@@ -252,7 +281,7 @@
             </div>
 
             <!-- Body Repair -->
-            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+            <div class="w3-col l4 m6 s12 w3-margin-bottom animate-on-scroll">
               <div class="w3-card-4 w3-hover-shadow">
                 <img
                   src="/images/services/body_repair.webp"
@@ -276,7 +305,7 @@
             </div>
 
             <!-- Painting -->
-            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+            <div class="w3-col l4 m6 s12 w3-margin-bottom animate-on-scroll">
               <div class="w3-card-4 w3-hover-shadow">
                 <img
                   src="/images/services/paintwork.webp"
@@ -301,7 +330,7 @@
             </div>
 
             <!-- Mechanical -->
-            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+            <div class="w3-col l4 m6 s12 w3-margin-bottom animate-on-scroll">
               <div class="w3-card-4 w3-hover-shadow">
                 <img
                   src="/images/services/mechanical.webp"
@@ -326,7 +355,7 @@
             </div>
 
             <!-- Rust Repair -->
-            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+            <div class="w3-col l4 m6 s12 w3-margin-bottom animate-on-scroll">
               <div class="w3-card-4 w3-hover-shadow">
                 <img
                   src="/images/services/rust.webp"
@@ -348,7 +377,7 @@
             </div>
 
             <!-- Restoration -->
-            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+            <div class="w3-col l4 m6 s12 w3-margin-bottom animate-on-scroll">
               <div class="w3-card-4 w3-hover-shadow">
                 <img
                   src="/images/services/restoration.webp"
@@ -373,7 +402,7 @@
             </div>
 
             <!-- Frame and Suspension Repair -->
-            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+            <div class="w3-col l4 m6 s12 w3-margin-bottom animate-on-scroll">
               <div class="w3-card-4 w3-hover-shadow">
                 <img
                   src="/images/services/frame_suspension.webp"
@@ -398,7 +427,7 @@
             </div>
 
             <!-- Engine Tuning and Performance -->
-            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+            <div class="w3-col l4 m6 s12 w3-margin-bottom animate-on-scroll">
               <div class="w3-card-4 w3-hover-shadow">
                 <img
                   src="/images/services/engine.webp"
@@ -423,7 +452,7 @@
             </div>
 
             <!-- Exhaust Systems -->
-            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+            <div class="w3-col l4 m6 s12 w3-margin-bottom animate-on-scroll">
               <div class="w3-card-4 w3-hover-shadow">
                 <img
                   src="/images/services/exhaust.webp"
@@ -448,7 +477,7 @@
             </div>
 
             <!-- Oil and Fluid Maintenance -->
-            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+            <div class="w3-col l4 m6 s12 w3-margin-bottom animate-on-scroll">
               <div class="w3-card-4 w3-hover-shadow">
                 <img
                   src="/images/services/oil_fluid.webp"
@@ -473,7 +502,7 @@
             </div>
 
             <!-- Tire Rotation and Balancing -->
-            <div class="w3-col l4 m6 s12 w3-margin-bottom">
+            <div class="w3-col l4 m6 s12 w3-margin-bottom animate-on-scroll">
               <div class="w3-card-4 w3-hover-shadow">
                 <img
                   src="/images/services/wheel.webp"
@@ -498,40 +527,8 @@
             </div>
           </div>
         </div>
-
-        <!-- Contact -->
-        <div class="w3-container w3-padding-32" id="contact">
-          <h2 class="w3-border-bottom w3-border-light-grey">Contact</h2>
-          <form class="w3-container w3-white w3-card-4 w3-padding" action="#">
-            <p>
-              <label>Name</label>
-              <input
-                class="w3-input w3-border"
-                type="text"
-                placeholder="Your name"
-              />
-            </p>
-            <p>
-              <label>Email</label>
-              <input
-                class="w3-input w3-border"
-                type="email"
-                placeholder="Your email"
-              />
-            </p>
-            <p>
-              <label>Message</label>
-              <textarea
-                class="w3-input w3-border"
-                rows="4"
-                placeholder="Write something..."
-              ></textarea>
-            </p>
-            <p>
-              <button class="w3-button w3-black" type="submit">Send</button>
-            </p>
-          </form>
-        </div>
+        <!-- Animate the above elements -->
+        <script src="animation.js"></script>
       </div>
     </main>
 
