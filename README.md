@@ -11,3 +11,5 @@ Expertise: Organized page better and added links to heading above image instead 
 Testimonals: Created less white space and made overall page look cleaner
 
 Contact Page: Added Google Maps and Street View embed side-by-side opposed to still images. Generalized the contact form to handle any inquiries.
+
+Car talk: Improved how easy it is to navigate, added more sections relavant to the subject of the page
