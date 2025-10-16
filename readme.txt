@@ -1,5 +1,3 @@
-# project3-group4-Justin-Featherstone-Maxwell-Sprogis-Daniel-Mead-William-Huynh
-
 Pages Improved:
 
 Home: Organized offered services section into a grid layout, removed all services buttons at the top of the page
